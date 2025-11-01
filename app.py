@@ -10,14 +10,14 @@ CORS(app)
 recommender = TravelPackageRecommender()
 
 
-@app.route("/")
-def index():
-    """Render the main page"""
-    unique_values = {}
-    if recommender.df is not None:
-        unique_values = recommender.get_unique_values()
+# @app.route("/")
+# def index():
+#     """Render the main page"""
+#     unique_values = {}
+#     if recommender.df is not None:
+#         unique_values = recommender.get_unique_values()
 
-    return render_template("index.html", unique_values=unique_values)
+#     return render_template("index.html", unique_values=unique_values)
 
 
 @app.route("/api/recommend", methods=["POST"])
