@@ -20,7 +20,7 @@ recommender = TravelPackageRecommender()
 #     return render_template("index.html", unique_values=unique_values)
 
 
-@app.route("https://travel-backend-98pt.onrender.com/api/recommend", methods=["POST"])
+@app.route("/api/recommend", methods=["POST"])
 def get_recommendations():
     """Get travel package recommendations"""
     try:
@@ -156,4 +156,4 @@ if __name__ == "__main__":
     print("   GET  /api/dataset-info - Get dataset information")
     print("   GET  /api/health - Health check")
 
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    app.run(debug=True, host="https://travel-backend-98pt.onrender.com")
