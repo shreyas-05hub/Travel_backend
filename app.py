@@ -20,7 +20,7 @@ recommender = TravelPackageRecommender()
 #     return render_template("index.html", unique_values=unique_values)
 
 
-@app.route("/api/recommend", methods=["POST"])
+@app.route("https://travel-backend-98pt.onrender.com/api/recommend", methods=["POST"])
 def get_recommendations():
     """Get travel package recommendations"""
     try:
@@ -139,9 +139,9 @@ def health_check():
 
 
 if __name__ == "__main__":
-    print("🚀 Starting Travel Package Recommender API...")
-    print("📁 Current directory:", os.getcwd())
-    print("📂 Files in directory:", [f for f in os.listdir(".") if f.endswith(".csv")])
+    # print("🚀 Starting Travel Package Recommender API...")
+    # print("📁 Current directory:", os.getcwd())
+    # print("📂 Files in directory:", [f for f in os.listdir(".") if f.endswith(".csv")])
 
     if recommender.df is not None:
         print("✅ Dataset loaded successfully!")
